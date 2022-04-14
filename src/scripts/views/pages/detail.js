@@ -1,3 +1,6 @@
+import TheMovieDbSource from '../../data/themoviedb-source';
+import UrlParser from '../../routes/url-parser';
+
 const Detail = {
   async render() {
     return `
@@ -6,7 +9,11 @@ const Detail = {
   },
 
   async afterRender() {
-    // This function wiil be called after render().
+    const url = UrlParser.parseActiveUrlWithoutCombiner();
+    const movie = await TheMovieDbSource.movieDetail(url.id);
+    console.log(movie);
+
+    // TODO: render movie detail to DOM.
   },
 };
 
