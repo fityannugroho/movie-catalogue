@@ -2,6 +2,7 @@ import 'regenerator-runtime';
 import '../styles/style.css';
 import '../styles/responsive.css';
 import App from './views/app';
+import serviceWorkerRegister from './utils/service-worker-register';
 
 const app = new App({
   button: document.querySelector('#hamburgerButton'),
@@ -13,4 +14,7 @@ window.addEventListener('hashchange', () => {
   app.renderPage();
 });
 
-app.renderPage();
+window.addEventListener('load', () => {
+  app.renderPage();
+  serviceWorkerRegister();
+});
