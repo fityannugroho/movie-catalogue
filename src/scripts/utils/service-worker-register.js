@@ -8,7 +8,7 @@ const serviceWorkerRegister = async () => {
       });
     return;
   }
-  console.log('Service Worker not supported');
+  console.log('Service Worker not supported in this browser.');
 };
 
 export default serviceWorkerRegister;
