@@ -1,5 +1,25 @@
 @media screen and (min-width: 650px) {
-  .app-bar {
+  .movies {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .movie {
+    grid-template-columns: auto 1fr;
+  }
+
+  .movie .movie__title {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .movie .movie__overview {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+@media screen and (min-width: 720px) {
+   .app-bar {
     grid-template-columns: 1fr auto;
     padding: 8px 32px;
   }
@@ -26,24 +46,6 @@
     width: 120px;
     text-align: center;
     margin: 0;
-  }
-
-  .movies {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .movie {
-    grid-template-columns: auto 1fr;
-  }
-
-  .movie .movie__title {
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
-
-  .movie .movie__overview {
-    grid-column-start: 1;
-    grid-column-end: 3;
   }
 }
 
